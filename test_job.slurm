@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=128
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time==00:10:00
+#SBATCH --time==0:10:0
 #SBATCH --account=ta135
 #SBATCH --partition=standard
 #SBATCH --qos=lowpriority
