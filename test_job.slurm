@@ -1,6 +1,6 @@
 #!/bin/bash --login
 
-#SBATCH --name=ConstructAllW5321 Test
+#SBATCH --job-name=ConstructAllW5321 Test
 #SBATCH --node=1
 #SBATCH --ntasks-per-node=128
 #SBATCH --tasks-per-node=1
