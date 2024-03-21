@@ -22,10 +22,7 @@ load_file = ["2021 Weekly.xlsx"]
 sheet = ["Week 53"]
 save_file = ["2021 WeeklyHours.xlsx"]
 newVar = ["Default"]
-original_file_name = sheet[0]
-base_name, _ = original_file_name.rsplit('.', 1)  # This removes the extension and keeps the base file name
-text_file_name = base_name + '.txt'  # Add the '.txt' extension to the base file name
-text_save_file = [text_file_name]  # Keep it as a list with a single element, to match the original format
+text_save_file = ["Week 53 - Test"]  # Keep it as a list with a single element, to match the original format
 
 #Link the config variables (above) with the associated 'configW5321.txt' info
 config_settings = {"LOAD FILE=":load_file,"SAVE FILE=":save_file,"SHEET NAME=":sheet}
