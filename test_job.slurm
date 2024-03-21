@@ -9,9 +9,6 @@
 #SBATCH --partition=standard
 #SBATCH --qos=lowpriority
 
-# Setup the batch environment
-module load epcc-job-env
-
 # Load the Python module
 module load cray-python
 
