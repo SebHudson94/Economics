@@ -1,19 +1,20 @@
 #!/bin/bash --login
 
 #SBATCH --job-name="ConstructAllW5321Copy"
-#SBATCH --node=1
+#SBATCH --nodes=1
 #SBATCH --ntasks-per-node=128
-#SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time==00:10:00
-#SBATCH --account=ta135
+#SBATCH --time=00:10:00
+#SBATCH --account=ta135-shudson
 #SBATCH --partition=standard
-#SBATCH --qos=lowpriority
+#SBATCH --qos=short
 
-# Setup the batch environment
-module load epcc-job-env
+source /work/ta135/ta135/shudson/myvenv/bin/activate
 
 # Load the Python module
 module load cray-python
 
-python ConstructAllW5321Copy
+export PYTHONUSERBASE=/work/ta135/ta135/shudson/.local
+export PATH=$PYTHONUSERBASE/bin:$PATH
+
+python ConstructAllW5321Copy.py
